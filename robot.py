@@ -75,3 +75,17 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         exit()
+
+
+
+## новый код
+
+def start(m):
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    keyboard.add(*[types.KeyboardButton(name) for name in ['Попробую', 'Чувак, разбирайся сам']])
+    bot.send_message(m.chat.id, 'Готов помочь мне советом?',
+        reply_markup=keyboard)
+
+
+
+
