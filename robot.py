@@ -39,15 +39,8 @@ token = "500356225:AAEzQwaTne7NgT1sxpJThEm7YrER7aGtxxg"
 
 
 @bot.message_handler(commands=['start'])
-def start(message):
-    sent = bot.send_message(message.chat.id, 'Как тебя зовут?')
-    bot.register_next_step_handler(sent, hello)
-
-
-def hello(message):
-    bot.send_message(
-    message.chat.id,
-    'Привет, {name}. Рад тебя видеть.'.format(name=message.text))
+def start(m):
+    msg = bot.send_message(m.chat.id, 'Как тебя зовут?')
 
 
 bot.polling()
