@@ -8,6 +8,8 @@ import datetime
 import config
 import telebot
 
+bot = telebot.TeleBot(config.token)
+
 ## TOKEN - INSERT YOUR TOKEN HERE
 token = "500356225:AAEzQwaTne7NgT1sxpJThEm7YrER7aGtxxg"
 
